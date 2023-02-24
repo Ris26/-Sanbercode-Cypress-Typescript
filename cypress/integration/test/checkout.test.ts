@@ -13,16 +13,17 @@ beforeEach("Log in", () => {
   cy.wait(2000);
 });
 
-beforeEach("Add single product to card", () => {
-  addToCard("Sauce Labs Backpack");
-  cy.get(productObject.cartValue).should("contain", 1);
-  cy.get(cartButton).click();
-  cy.get(checkoutButton).click();
-  cy.wait(1000);
-});
 
 describe("Checkout page validation tests", () => {
   it("all customer information is mandatory", () => {
+    // Add To Cart
+    addToCard("Sauce Labs Backpack");
+    cy.get(productObject.cartValue).should("contain", 1);
+    cy.get(cartButton).click();
+    cy.get(checkoutButton).click();
+    cy.wait(1000);
+    
+    // Input
     cy.get(firstnameInput).type(firstname).clear();
     cy.get(lastnameInput).type(lastname).clear();
     cy.get(zipInput).type(zip).clear();
@@ -33,6 +34,14 @@ describe("Checkout page validation tests", () => {
   });
 
   it("the items in the cart should be shown in the overview", () => {
+    // Add To Cart
+    addToCard("Sauce Labs Backpack");
+    cy.get(productObject.cartValue).should("contain", 1);
+    cy.get(cartButton).click();
+    cy.get(checkoutButton).click();
+    cy.wait(1000);
+
+    // Input 
     cy.get(firstnameInput).type(firstname);
     cy.get(lastnameInput).type(lastname);
     cy.get(zipInput).type(zip);
@@ -43,6 +52,14 @@ describe("Checkout page validation tests", () => {
   });
 
   it("the items in the cart should be shown in the overview", () => {
+    // Add To Cart
+    addToCard("Sauce Labs Backpack");
+    cy.get(productObject.cartValue).should("contain", 1);
+    cy.get(cartButton).click();
+    cy.get(checkoutButton).click();
+    cy.wait(1000);
+
+    // Input
     cy.get(firstnameInput).type(firstname);
     cy.get(lastnameInput).type(lastname);
     cy.get(zipInput).type(zip);

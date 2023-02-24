@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-24T00:13:46.698Z",
+    "end": "2023-02-24T00:14:09.218Z",
+    "duration": 22520,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4af810a-6585-4cba-802a-3c222994d3f4",
+      "title": "",
+      "fullFile": "cypress/integration/test/checkout.test.ts",
+      "file": "cypress/integration/test/checkout.test.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "59ec0549-7690-415b-97e6-52d085666515",
+          "title": "Checkout page validation tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "all customer information is mandatory",
+              "fullTitle": "Checkout page validation tests all customer information is mandatory",
+              "timedOut": null,
+              "duration": 7427,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add To Cart\n(0, products_step_1.addToCard)(\"Sauce Labs Backpack\");\ncy.get(productObject.cartValue).should(\"contain\", 1);\ncy.get(products_step_1.cartButton).click();\ncy.get(products_step_1.checkoutButton).click();\ncy.wait(1000);\n// Input\ncy.get(checkout_pages_1.firstnameInput).type(firstname).clear();\ncy.get(checkout_pages_1.lastnameInput).type(lastname).clear();\ncy.get(checkout_pages_1.zipInput).type(zip).clear();\ncy.get(checkout_pages_1.continueButton).click();\n// Alert not input information\ncy.get(checkout_object_1.alertEror).contains(checkout_object_1.alertText);",
+              "err": {},
+              "uuid": "e99ce782-2168-4c5d-ab88-9eda288b67d2",
+              "parentUUID": "59ec0549-7690-415b-97e6-52d085666515",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "the items in the cart should be shown in the overview",
+              "fullTitle": "Checkout page validation tests the items in the cart should be shown in the overview",
+              "timedOut": null,
+              "duration": 6663,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add To Cart\n(0, products_step_1.addToCard)(\"Sauce Labs Backpack\");\ncy.get(productObject.cartValue).should(\"contain\", 1);\ncy.get(products_step_1.cartButton).click();\ncy.get(products_step_1.checkoutButton).click();\ncy.wait(1000);\n// Input \ncy.get(checkout_pages_1.firstnameInput).type(firstname);\ncy.get(checkout_pages_1.lastnameInput).type(lastname);\ncy.get(checkout_pages_1.zipInput).type(zip);\ncy.get(checkout_pages_1.continueButton).click();\n//validation product checkout\ncy.get(checkout_object_1.checkoutOverview).contains(checkout_object_1.overviewText);",
+              "err": {},
+              "uuid": "f2163d6a-273c-479e-ac87-a13dce233972",
+              "parentUUID": "59ec0549-7690-415b-97e6-52d085666515",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "the items in the cart should be shown in the overview",
+              "fullTitle": "Checkout page validation tests the items in the cart should be shown in the overview",
+              "timedOut": null,
+              "duration": 6889,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add To Cart\n(0, products_step_1.addToCard)(\"Sauce Labs Backpack\");\ncy.get(productObject.cartValue).should(\"contain\", 1);\ncy.get(products_step_1.cartButton).click();\ncy.get(products_step_1.checkoutButton).click();\ncy.wait(1000);\n// Input\ncy.get(checkout_pages_1.firstnameInput).type(firstname);\ncy.get(checkout_pages_1.lastnameInput).type(lastname);\ncy.get(checkout_pages_1.zipInput).type(zip);\ncy.get(checkout_pages_1.continueButton).click();\ncy.get(checkout_pages_1.finishButton).click();\n//validation product checkout succes\ncy.get(checkout_object_1.checkoutSucces).contains(checkout_object_1.succesText);",
+              "err": {},
+              "uuid": "987a3a8a-eab3-43aa-87f4-9342344c6693",
+              "parentUUID": "59ec0549-7690-415b-97e6-52d085666515",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e99ce782-2168-4c5d-ab88-9eda288b67d2",
+            "f2163d6a-273c-479e-ac87-a13dce233972",
+            "987a3a8a-eab3-43aa-87f4-9342344c6693"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20979,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
