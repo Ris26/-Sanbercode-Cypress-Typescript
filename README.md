@@ -20,6 +20,8 @@ npx cypress open
 ```
 
 Test Result 
+
+
 <img width="306" alt="Exampel 01" src="https://user-images.githubusercontent.com/88923422/221061995-0445b4cc-27e2-48ec-84cf-cfdab33d01e0.png">
 
 
